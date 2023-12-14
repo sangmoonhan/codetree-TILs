@@ -22,7 +22,7 @@ if a > d :
 else :
     print(0)
 
-if a > 3 :
+if a > e :
     print(1)
 else :
     print(0)

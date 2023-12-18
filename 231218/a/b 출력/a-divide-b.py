@@ -1,7 +1,11 @@
 arr = input().split()
 
-a = float(arr[0])
-b = float(arr[1])
-c = a/b
+a = 10 * int(arr[0])
+b = int(arr[1])
+
 #print(a/b)
-print("{:.20f}".format(c))
+print("0.",end="")
+for i in range(0,20):
+    c = a//b
+    print(c,end="")
+    a = a%b

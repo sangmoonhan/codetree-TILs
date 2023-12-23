@@ -7,7 +7,7 @@ for i in range(n):
 
     mean_val = sum(arr) / 4
 
-    if mean_val > 60 :
+    if mean_val >= 60 :
         print('pass')
         pas += 1
     else :

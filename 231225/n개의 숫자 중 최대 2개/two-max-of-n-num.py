@@ -1,23 +1,14 @@
 n = int(input())
-
 arr = list(map(int, input().split()))
 
-if arr.count(max(arr)) >= 2 :
-    print(max(arr),max(arr))
-else:
+max_val = max(arr[0], arr[1])
+second_max_val = min(arr[0], arr[1])
 
-    max_val = [max(arr)]
-    max_val2= arr[0]
+for i in range(2, n):
+    if arr[i] > max_val:
+        second_max_val = max_val
+        max_val = arr[i]
+    elif arr[i] > second_max_val:
+        second_max_val = arr[i]
 
-    for i in arr:
-        
-        if max_val[0] == i:
-            continue
-        
-        else : 
-            if max_val2 <= i :
-                max_val2 = i
-
-    max_val.append(max_val2)
-    
-    print(max_val[0],max_val[1])
+print(max_val, second_max_val)

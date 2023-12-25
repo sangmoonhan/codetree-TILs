@@ -30,3 +30,4 @@ for _ in range(q):
     else :
         for i in arr[brr[1]-1:brr[2]]:
             print(i, end=" ")
+        print()

@@ -2,12 +2,11 @@ n=int(input())
 
 arr = list(map(int,input().split()))
 
-max_val = max(arr)
+idx = n+1
 
-idx1 = arr.index(max_val)
+while idx != 0 :
+    max_val = max(arr[:idx])
 
-max_val = max(arr[:idx1])
+    idx = arr.index(max_val)
 
-idx2 = arr.index(max_val)
-
-print(idx1+1, idx2+1)
+    print(idx+1, end=" ")

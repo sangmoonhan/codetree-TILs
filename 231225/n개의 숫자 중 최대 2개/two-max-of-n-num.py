@@ -6,13 +6,12 @@ max_val = [max(arr)]
 
 if arr.count(max(arr)) >= 2 :
     print(max(arr),max(arr))
-
 else:
     max_val2= arr[0]
 
     for i in arr:
         
-        if max_val[0] <= i:
+        if max_val[0] == i:
             continue
         
         else : 

@@ -2,11 +2,11 @@ n = int(input())
 
 arr = list(map(int, input().split()))
 
-max_val = [max(arr)]
-
 if arr.count(max(arr)) >= 2 :
     print(max(arr),max(arr))
 else:
+
+    max_val = [max(arr)]
     max_val2= arr[0]
 
     for i in arr:
@@ -15,7 +15,7 @@ else:
             continue
         
         else : 
-            if max_val2 < i :
+            if max_val2 <= i :
                 max_val2 = i
 
     max_val.append(max_val2)

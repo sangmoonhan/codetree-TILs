@@ -7,7 +7,15 @@ B = list(map(int,input().split()))
 
 jud = "No"
 
-if B in A :
-    print("Yes")
-else : 
-    print("No")
+for i in range(n1 - n2) : 
+
+    cnt = 0
+
+    for j in range(i, i+n2):
+        if A[j] == B[j-i]:
+            cnt += 1
+    
+    if cnt == n2 :
+        jud = "Yes" 
+
+print(jud)

@@ -7,3 +7,5 @@ idx = -1
 
 if n in word :
     print(word.index(n))
+else : 
+    print("None")

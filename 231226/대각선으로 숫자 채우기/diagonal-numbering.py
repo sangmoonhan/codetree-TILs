@@ -2,7 +2,7 @@ arr = list(map(int,input().split()))
 
 n, m = arr[0], arr[1]
 
-max_val = 99
+max_val = 200
 
 arr = [ [0 for _ in range(m)] for _ in range(n) ]
 

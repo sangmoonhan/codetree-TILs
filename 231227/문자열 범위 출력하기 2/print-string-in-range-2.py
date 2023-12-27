@@ -2,5 +2,8 @@ ch = input()
 
 n = int(input())
 
-for i in range(n):
+if n > len(ch):
+    print(ch)
+else:
+    for i in range(n):
     print(ch[-1-i],end="")

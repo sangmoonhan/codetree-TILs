@@ -15,7 +15,7 @@ for i in range(1,len(ch)):
 sum_val = 0
 
 for i in arr:
-    sum_val += len(i)
+    sum_val += len("{}".format(i))
 
 print(sum_val)
 

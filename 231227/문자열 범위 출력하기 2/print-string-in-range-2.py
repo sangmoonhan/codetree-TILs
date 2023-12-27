@@ -2,7 +2,7 @@ ch = input()
 
 n = int(input())
 
-if n > len(ch):
+if n >= len(ch):
     print(ch)
 else:
     for i in range(n):

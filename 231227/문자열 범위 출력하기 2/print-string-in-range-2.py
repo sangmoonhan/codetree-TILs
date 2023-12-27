@@ -6,4 +6,4 @@ if n > len(ch):
     print(ch)
 else:
     for i in range(n):
-    print(ch[-1-i],end="")
+        print(ch[-1-i],end="")

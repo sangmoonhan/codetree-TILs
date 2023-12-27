@@ -12,7 +12,12 @@ for i in range(1,len(ch)):
         arr.append(1)
         cnt += 2
 
-print(len(arr))
+sum_val
+
+for i in arr:
+    sum_val += len(arr)
+
+print(sum_val)
 
 for i in arr:
     print(i,end="")

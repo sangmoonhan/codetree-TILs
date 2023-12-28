@@ -9,4 +9,7 @@ while a != b :
 
     cnt += 1
 
+    if cnt == len(a):
+        break
+
 print(cnt)

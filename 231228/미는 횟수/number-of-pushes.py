@@ -10,7 +10,10 @@ while a != b :
     cnt += 1
 
     if cnt > len(a):
-        print(-1)
+        
         break
 
-print(cnt)
+if cnt > len(a) :
+    print(-1)
+else :
+    print(cnt)

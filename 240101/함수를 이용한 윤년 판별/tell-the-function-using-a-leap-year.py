@@ -5,7 +5,7 @@ def is_yoon(n):
         return False
     if n % 4 == 0:
         return True
-    return True
+    return False
 
 n = int(input())
 

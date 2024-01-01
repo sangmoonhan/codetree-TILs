@@ -10,9 +10,9 @@ a, b = tuple(map(int,input().split()))
 
 sum_val = 0
 
-for i in range(a,b+1):
+for j in range(a,b+1):
 
-    if is_prime(i):
-        sum_val += i
+    if is_prime(j):
+        sum_val += j
 
 print(sum_val)

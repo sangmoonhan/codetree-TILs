@@ -9,9 +9,10 @@ def game(a,o,c):
     elif o == '*' :
         num = a * c
     else : 
-        return "false"
+        print("False")
+        return 
 
-    print("{} {} {} = {}".format(a,o,c,num))
+    print("{} {} {} = {}".format(a,o,c,int(num)))
 
 arr = input().split()
 

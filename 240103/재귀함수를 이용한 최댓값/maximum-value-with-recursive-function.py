@@ -6,10 +6,8 @@ def f(n, arr):
         else :
             return arr[1]
     
-    if arr[n-1] > f(n-1,arr)  :
-        return arr[n-1]
-    else : 
-        return f(n-1,arr)
+    if arr[n-1] > f(n-1,arr) : return arr[n-1]
+    else : return f(n-1,arr)
 
 n = int(input())
 

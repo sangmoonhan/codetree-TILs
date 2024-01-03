@@ -11,14 +11,13 @@ def f(n,arr) :
 
         return arr[0] * arr[1] // gcd
 
-    c = f(n-1,arr)
     gcd1 = 1
     
-    for j in range(1, min(c,arr[n-1]) + 1):
+    for j in range(1, min(f(n-1,arr),arr[n-1]) + 1):
         
-        if c % j == 0 and arr[n-1] % j == 0 :
+        if f(n-1,arr) % j == 0 and arr[n-1] % j == 0 :
             gcd1=j
 
-    return c * arr[n-1] // gcd1
+    return f(n-1,arr) * arr[n-1] // gcd1
 
 print(f(n,arr))

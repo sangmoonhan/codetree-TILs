@@ -13,4 +13,4 @@ n = int(input())
 
 arr = list(map(int,input().split()))
 
-print(f(n, arr))
+print(max(arr))

@@ -8,7 +8,7 @@ for i in range(n):
 
     ch = input()
 
-    if ch[:2] == t :
+    if ch[:len(t)] == t :
         arr.append(ch)
 
 arr.sort()

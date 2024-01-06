@@ -15,7 +15,7 @@ elif a == 11 :
     if h < 11 :
         print(-1)
     elif h == 11 :
-        if m <= 11:
+        if m < 11:
             print(-1)
 else :
     while True:
@@ -32,5 +32,5 @@ else :
         if h == 24 :
             d += 1
             h = 0
-            
+
     print(elapsed_mins)

@@ -19,15 +19,15 @@ elif m1 < m2 :
     month, day = m1, d1
     
     while True:
-    if month == m2 and day == d2:
-        break
+        if month == m2 and day == d2:
+            break
 
-    idx += 1
-    day += 1
+        idx += 1
+        day += 1
 
-    if day > num_of_days[month]:
-        month += 1
-        day = 1
+        if day > num_of_days[month]:
+            month += 1
+            day = 1
     
     idx = idx % 7
 
@@ -37,15 +37,15 @@ else :
     month, day = m2, d2
     
     while True:
-    if month == m1 and day == d1:
-        break
+        if month == m1 and day == d1:
+            break
 
-    idx += 1
-    day += 1
+        idx += 1
+        day += 1
 
-    if day > num_of_days[month]:
-        month += 1
-        day = 1
+        if day > num_of_days[month]:
+            month += 1
+            day = 1
     
     idx = idx % 7
 

@@ -1,42 +1,55 @@
-input_list = [list(map(int,input().split())) for _ in range(2)]
+square1 = list(map(int, input().split()))
+square2 = list(map(int, input().split()))
+
+# x1, y1, x2, y2
+# 0 1 2 3
 
 offset = 1000
-max_number = 2001
+max_r = 2000
 
-area_list = [[0] * max_number for _ in range(max_number)]
+grid = [
+    [0]*(max_r+1)
+    for i in range(max_r+1)
+]
 
-x1, y1, x2, y2 = input_list[0]
+# print(grid)
 
-for idx in range(x1+offset, x2+offset+1):
-    for idy in range(y1+offset, y2+offset+1):
-        area_list[idx][idy] = 1 
+x1, y1, x2, y2 = map(lambda x: x+offset, square1)
 
-x1, y1, x2, y2 = input_list[1]
+# print(x1, y1, x2, y2 )
 
-for idx in range(x1+offset, x2+offset+1):
-    for idy in range(y1+offset, y2+offset+1):
-        area_list[idx][idy] = 0  
-
-empty_list = list()
-
-# 겹치지 않는 영역들의 위치 정보를 empty_list에 저장합니다.
-
-for dx in range(2001):
-    for dy in range(2001):
-        if area_list[dx][dy] == 1:
-            empty_list.append([dx,dy])
-
-min_x, min_y = 2001,2001
-max_x, max_y = 0,0
-
-if empty_list == []:
-    print(0)
-else:
+for i in range(x1, x2): 
+    for j in range(y1, y2):
+        grid[i][j] = 1
     
-    for value in empty_list:
-        min_x ,max_x = min(min_x,value[0]), max(max_x, value[0])
-        min_y, max_y = min(min_y,value[1]), max(max_y,value[1])
-    
-    answer = (max_x - min_x) * (max_y - min_y)
-    
-    print(answer)
+
+x1, y1, x2, y2 = map(lambda x: x+offset, square2)
+
+for i in range(x1, x2): 
+    for j in range(y1, y2):
+        grid[i][j] = 0
+
+# 조건에 맞지 않는다면 
+# 즉 겹치지 않는다면 전부 0이기 때문에 갱신이 되지 않을 것이다 
+min_x = max_r
+min_y = max_r
+max_x = 0
+max_y = 0
+
+# 1인 경우 x,y의 최대 좌표와  최소 좌표를 구해보자
+for i in range(max_r+1):
+    for j in range(max_r+1):
+        if grid[i][j] == 1:
+            max_x = max(max_x, i)
+            max_y = max(max_y, j)
+            min_x = min(min_x, i)
+            min_y = min(min_y, j)
+
+area = 0
+
+if min_x == max_r and min_y == max_r and max_x == 0 and max_y == 0 :
+    area = 0
+else :
+    area = (max_x-min_x+1) * (max_y- min_y+1)
+
+print(area)

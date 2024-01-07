@@ -1,16 +1,21 @@
 n = int(input())
 
-lo = 1500
+lo = 7
 
-arr = [0] * 3000
+arr = [0] * 15
 
-for _ in range(n):
+for j in range(n):
 
     brr = input().split() 
 
     x, d = int(brr[0]), brr[1]
 
-    arr[lo] += 1
+    if j == 0:
+        arr[lo] += 1
+
+    if j >= 1:
+        if d != d1 :
+            arr[lo] += 1
 
     if d == "R" :
 
@@ -22,6 +27,7 @@ for _ in range(n):
             lo -= 1
             arr[lo] += 1
     
+    d1 = d
 
 cnts = []
 

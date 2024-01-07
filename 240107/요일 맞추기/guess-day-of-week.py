@@ -40,7 +40,7 @@ else :
         if month == m1 and day == d1:
             break
 
-        idx += 1
+        idx -= 1
         day += 1
 
         if day > num_of_days[month]:

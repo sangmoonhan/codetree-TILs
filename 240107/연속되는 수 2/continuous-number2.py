@@ -2,7 +2,7 @@ n = int(input())
 
 cnts = []
 
-cnt = 1
+cnt = 0
 
 for i in range(n):
 

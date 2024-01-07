@@ -1,8 +1,8 @@
 n = int(input())
 
-lo = 7
+lo = 1500
 
-arr = [0] * 15
+arr = [0] * 3000
 
 for j in range(n):
 

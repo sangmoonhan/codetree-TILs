@@ -52,7 +52,12 @@ for i in range(m):
         B[lo] = crr_b
         lo += 1
 
+not_meet = -1
 for i in range(1,len(A)):
     if A[i] == B[i]:
         print(i)
+        not_meet = 0
         break
+
+if not_meet == -1 :
+    print(-1)

@@ -29,6 +29,12 @@ for i in range(T):
             infected[x] = 1
             #cnts[x] = k
             cnts[y] -= 1
+            continue
+    elif infected[y] == 1 and infected[x] == 1 :
+        if cnts[x] > 0 :
+            cnts[x] -= 1
+        if cnts[y] > 0 :
+            cnts[y] -= 1
 
 for i in range(1,len(infected)):
     print(infected[i],end="")

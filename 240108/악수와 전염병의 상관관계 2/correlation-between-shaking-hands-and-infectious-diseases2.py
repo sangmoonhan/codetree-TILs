@@ -18,12 +18,12 @@ for i in range(T):
 
     t, x, y = arr[i]
 
-    if infected[x] == 1 and infected[y] == 0 :
+    if infected[x] == 1 :
         if cnts[x] > 0 :
             infected[y] = 1
             #cnts[y] = k
             cnts[x] -= 1
-    elif infected[y] == 1 and infected[x] == 0:
+    elif infected[y] == 1 :
         if cnts[y] > 0 :
             infected[x] = 1
             #cnts[x] = k

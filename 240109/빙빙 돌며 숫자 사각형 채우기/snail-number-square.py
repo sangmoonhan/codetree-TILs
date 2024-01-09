@@ -32,6 +32,6 @@ for i in range(2, n * m + 1):
 
 # 출력:
 for i in range(n):
-    for j in range(n):
+    for j in range(m):
         print(answer[i][j], end = ' ')
     print()

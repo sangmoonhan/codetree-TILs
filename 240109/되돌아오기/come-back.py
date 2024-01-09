@@ -32,4 +32,7 @@ for _ in range(n):
     if x == 0 and y == 0 :
             break
 
-print(cnt)
+if x == 0 y == 0 :
+    print(cnt)
+else :
+    print(-1)

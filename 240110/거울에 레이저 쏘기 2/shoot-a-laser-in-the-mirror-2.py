@@ -9,10 +9,6 @@ dy = [0,-1,1,0]
 def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
 
-
-
-
-
 def f1(x,y,d,m):
     
     if m == "/" : # "/" 의 규칙
@@ -76,10 +72,10 @@ if a == 0 :
 elif a == 1 :
     x, y = (b-1 + n)%n, n-1
     d = 1
-elif a == 2:
+elif a == 2 :
     x, y = n-1, (b-1 + n)%n 
     d = 3
-else : 
+elif a == 3 : 
     x, y = (b-1 + n)%n, 0 
     d = 2
 

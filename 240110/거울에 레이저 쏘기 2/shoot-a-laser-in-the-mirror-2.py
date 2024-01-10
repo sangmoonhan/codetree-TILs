@@ -2,10 +2,6 @@ n = int(input())
 
 arr = [ list(input()) for _ in range(n) ]
 
-# 아래 왼 오 위
-dx = [1,0,0,-1]
-dy = [0,-1,1,0]
-
 start = int(input())
 
 a = start // n
@@ -29,6 +25,10 @@ else :
 def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
 
+    # 아래 왼 위 오
+dx = [1,0,-1,0]
+dy = [0,-1,0,1]
+
 def f1(x,y,d,m):
     
     if m == "/" : # "/" 의 규칙
@@ -42,42 +42,34 @@ def f1(x,y,d,m):
             c = 0
             return a,b,c 
 
-        elif d == 2: # → 오른쪽으로 오면 ↑ 위로 가고
+        elif d == 2: # ↑ 위로 오면  → 오른쪽으로가고
             a, b = x + dx[3], y + dy[3]
             c = 3
             return a,b,c 
         
-        elif d == 3: # ↑ 위로 오면 → 오른쪽으로 가고
+        elif d == 3: # → 오른쪽으로 오면 ↑ 위로 가고
             a, b = x + dx[2], y + dy[2]
             c = 2
             return a,b,c 
     else : # "\\" "\" 의 규칙
         if d == 0 : # ↓ 아래로 오면 → 오른쪽으로 가고
-            a, b = x + dx[2], y + dy[2]
-            c = 2
-            return a,b,c 
-        
-        elif d == 2: # → 오른쪽으로 오면 ↓ 아래로 가고
-            a, b = x + dx[0], y + dy[0]
-            c = 0
-            return a,b,c 
-
-        elif d == 1: # ← 왼쪽으로 오면 ↑ 위로 가고
             a, b = x + dx[3], y + dy[3]
             c = 3
             return a,b,c 
-        
-        elif d == 3: # ↑ 위로 오면 ← 왼쪽으로 가고
+        elif d == 3: # → 오른쪽으로 오면 ↓ 아래로 가고
+            a, b = x + dx[0], y + dy[0]
+            c = 0
+            return a,b,c 
+        elif d == 1: # ← 왼쪽으로 오면 ↑ 위로 가고
+            a, b = x + dx[2], y + dy[2]
+            c = 2
+            return a,b,c 
+        elif d == 2: # ↑ 위로 오면 ← 왼쪽으로 가고
             a, b = x + dx[1], y + dy[1]
             c = 1
             return a,b,c
     
-    return 2000, 2000, d
-
-#n = int(input())
-#arr = [ list(input()) for _ in range(n) ]
-
-
+    return 5000, 5000, d
 
 brr = [x,y,d]
 

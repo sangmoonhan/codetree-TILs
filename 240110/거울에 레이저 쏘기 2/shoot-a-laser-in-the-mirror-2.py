@@ -55,7 +55,7 @@ def f1(x,y,d,m):
             c = 1
             return a,b,c
     
-    return n, n, d
+    return 2000, 2000, d
 
 #n = int(input())
 #arr = [ list(input()) for _ in range(n) ]

@@ -1,4 +1,5 @@
 n = int(input())
+
 arr = [ list(input()) for _ in range(n) ]
 
 # 아래 왼 오 위
@@ -8,49 +9,49 @@ dy = [0,-1,1,0]
 def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
 
-# "/" 의 규칙
 
-# "\" 의 규칙
+
+
 
 def f1(x,y,d,m):
     
-    if m == "/" :
-        if in_range(x + dx[1], y + dy[1]) and d == 0 : # ↓ 아래로 오면 ← 왼쪽으로 가고
+    if m == "/" : # "/" 의 규칙
+        if d == 0 : # ↓ 아래로 오면 ← 왼쪽으로 가고
             a, b = x + dx[1], y + dy[1]
             c = 1
             return a,b,c 
         
-        elif in_range(x + dx[0], y + dy[0]) and d == 1: # ← 왼쪽으로 오면 ↓ 아래로 가고
+        elif d == 1: # ← 왼쪽으로 오면 ↓ 아래로 가고
             a, b = x + dx[0], y + dy[0]
             c = 0
             return a,b,c 
 
-        elif in_range(x + dx[3], y + dy[3]) and d == 2: # → 오른쪽으로 오면 ↑ 위로 가고
+        elif d == 2: # → 오른쪽으로 오면 ↑ 위로 가고
             a, b = x + dx[3], y + dy[3]
             c = 3
             return a,b,c 
         
-        elif in_range(x + dx[2], y + dy[2]) and d == 3: # ↑ 위로 오면 → 오른쪽으로 가고
+        elif d == 3: # ↑ 위로 오면 → 오른쪽으로 가고
             a, b = x + dx[2], y + dy[2]
             c = 2
             return a,b,c 
-    else : # "\\"
-        if in_range(x + dx[2], y + dy[2]) and d == 0 : # ↓ 아래로 오면 → 오른쪽으로 가고
+    else : # "\\" "\" 의 규칙
+        if d == 0 : # ↓ 아래로 오면 → 오른쪽으로 가고
             a, b = x + dx[2], y + dy[2]
             c = 2
             return a,b,c 
         
-        elif in_range(x + dx[0], y + dy[0]) and d == 2: # → 오른쪽으로 오면 ↓ 아래로 가고
+        elif d == 2: # → 오른쪽으로 오면 ↓ 아래로 가고
             a, b = x + dx[0], y + dy[0]
             c = 0
             return a,b,c 
 
-        elif in_range(x + dx[3], y + dy[3]) and d == 1: # ← 왼쪽으로 오면 ↑ 위로 가고
+        elif d == 1: # ← 왼쪽으로 오면 ↑ 위로 가고
             a, b = x + dx[3], y + dy[3]
             c = 3
             return a,b,c 
         
-        elif in_range(x + dx[1], y + dy[1]) and d == 3: # ↑ 위로 오면 ← 왼쪽으로 가고
+        elif d == 3: # ↑ 위로 오면 ← 왼쪽으로 가고
             a, b = x + dx[1], y + dy[1]
             c = 1
             return a,b,c
@@ -64,6 +65,9 @@ start = int(input())
 
 a = start // n
 b = start % n
+
+if b == 0 :
+    a -= 1
 
 # m * 4
 if a == 0 :
